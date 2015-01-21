@@ -1,0 +1,19 @@
+<h1>hey bey</h1>
+
+<% @students.each do |student| %>
+	<%= link_to student.name, student_path(student) %>
+	<li><%= student.class1 %></li>
+	<li><%= student.grade1 %></li>
+	<li><%= student.class2 %></li>
+	<li><%= student.grade2 %></li>
+	<li><%= student.class3 %></li>
+	<li><%= student.grade3 %></li>
+	<li><%= student.class4 %></li>
+	<li><%= student.grade4 %></li>
+	<%= link_to "Edit", edit_student_path(student) %>
+	<%= link_to "Delete", student_path(student), method: :delete %>
+	<br>
+	<br>
+<% end %>
+
+<%= link_to "New Student", new_student_path %>
